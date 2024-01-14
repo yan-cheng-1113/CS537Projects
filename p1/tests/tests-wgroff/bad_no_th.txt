@@ -1,0 +1,2 @@
+.SH NAME
+error - should cause error because no TH

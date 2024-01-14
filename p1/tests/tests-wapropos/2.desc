@@ -1,0 +1,1 @@
+Keyword with Entries - Should search man pages and print proper list pages containing keyword in correct format and order to stdout and return 0.

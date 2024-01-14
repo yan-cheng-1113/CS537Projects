@@ -1,0 +1,1 @@
+cp /p/course/cs537-oliphant/tests/P1/tests-wgroff/bold.txt .; ./wgroff bold.txt; cat boldExample.1

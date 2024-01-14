@@ -1,0 +1,7 @@
+To run the tests:
+
+1. Navigate to the base directory of your project. This directory should contain the source files along with a Makefile that has the 'all' target (it's been provided in the starter code) 
+2. From that directory, execute the runtests executable in this directory
+  Like:  ~cs537-1/tests/P6/runtests
+
+The output from runtests will indicate which tests you have passed and which you failed (if any)

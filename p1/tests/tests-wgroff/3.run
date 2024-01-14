@@ -1,0 +1,1 @@
+cp /p/course/cs537-oliphant/tests/P1/tests-wgroff/example2.txt .; ./wgroff example2.txt; cat example.2

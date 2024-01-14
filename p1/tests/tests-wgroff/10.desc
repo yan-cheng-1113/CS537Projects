@@ -1,0 +1,1 @@
+Improper format (no TH) - should exit returning 0 and print  usage message

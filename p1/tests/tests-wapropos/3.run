@@ -1,0 +1,1 @@
+cp -r /p/course/cs537-oliphant/tests/P1/tests-wapropos/man_pages .; ./wapropos pie

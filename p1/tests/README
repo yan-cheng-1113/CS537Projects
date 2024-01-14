@@ -1,0 +1,99 @@
+This README describes how to run the tests for P1. It should be simple;
+
+List of Testing Scripts:
+~cs537-1/tests/P1/test-wman.csh
+~cs537-1/tests/P1/test-wapropos.csh
+~cs537-1/tests/P1/test-wgroff.csh
+
+
+For example, to test your implementation of wman, just type:
+
+prompt> ~cs537-1/tests/P1/test-wman.csh
+
+This will run the tests for wman. If it works well, it should look like this:
+
+prompt>$ ~cs537-1/tests/P1/test-wman.csh 
+WMAN...
+TEST 0 - clean build (program should compile without errors or warnings)
+RESULT passed
+
+TEST 1 - No arguments - should exit returning 0 and print  usage message
+RESULT passed
+
+TEST 2 - 1 argument - Should search man pages and print proper page to stdout and return 0.
+RESULT passed
+
+TEST 3 - 2 arguments - Should search man pages and print proper page from proper section to stdout and return 0.
+RESULT passed
+
+TEST 4 - No man page in specified section - should exit returning 0 and print message
+RESULT passed
+
+TEST 5 - Invalid seection number - should exit returning 1 and print message
+RESULT passed
+
+TEST 6 - Non-number seection number - should exit returning 1 and print message
+RESULT passed
+
+TEST 7 - No Man Page Entry - should exit returning 0 and print message
+RESULT passed
+
+TEST SCORE: 7
+
+prompt> 
+
+
+Unfortunately, sometimes a test won't pass. Here's an example of this:
+
+prompt> ~cs537-1/tests/P1/test-wman.csh
+RESULT passed
+
+TEST 1 - No arguments - should exit and return usage message
+RESULT failed
+return code does not match expected
+expected: [0]
+got:      [1]
+
+standard output does not match expected
+expected: [What manual page do you want?
+For example, try 'wman wman'
+]
+got:      []
+
+
+TESTING HALTED (use -c or --continue to keep going if you like)
+prompt>
+
+As you can see in the test, this version of wman didn't include
+the right usage message and the return code was wrong, so it didn't match
+what was expected. The result is that the testing is halted, and an error
+is reported. You can optionally run all the tests (despite the failure) by
+adding the -c flag on the command line.
+
+When you run into a problem, you may wish to run a test "by hand" in order
+to debug your code. To do this, one particularly handy flag is the "-v" flag,
+which tells you specifically which command was run to do the test. For
+example, to get more info about the wman tests, you would type:
+
+prompt> $ ~cs537-1/tests/P1/test-wman.csh -v
+WMAN...
+TEST 0 - clean build (program should compile without errors or warnings)
+COMMAND gcc wman.c -o wman -Wall -Werror 
+RESULT passed
+
+TEST 1 - No arguments - should exit returning 0 and print  usage message
+COMMAND ./wman
+RESULT passed
+
+TEST 2 - 1 argument - Should search man pages and print proper page to stdout and return 0.
+COMMAND cp -r /p/course/cs537-oliphant/tests/P1/tests-wman/man_pages .; ./wman wman
+RESULT passed
+...
+
+As you can see, the COMMAND line tells you exactly what to run to run
+a test by hand. 
+
+
+
+
+

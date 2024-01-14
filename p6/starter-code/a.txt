@@ -1,0 +1,3 @@
+curl 'http://localhost:33489/2/dummy1.html' -H 'Delay: 100'
+curl 'http://localhost:33489/2/dummy1.html' -H 'Delay: 100'
+curl 'http://localhost:33489/2/dummy1.html'
